@@ -329,7 +329,7 @@ def error_prompt(error_description: str) -> str:
 # --- State-based Resource Access ---
 
 @mcp.resource("state://current")
-def get_state_info(ctx: Context) -> str:
+def get_state_info() -> str:
     """Get information about the current state"""
     current_state = orchestration_ctx.current_state
     state_descriptions = {
@@ -352,7 +352,7 @@ def get_state_info(ctx: Context) -> str:
 
 
 @mcp.resource("state://{state_name}/prompt")
-def get_state_prompt(state_name: str, ctx: Context) -> str:
+def get_state_prompt(state_name: str) -> str:
     """Get the prompt for a specific state
     
     Args:
@@ -386,7 +386,7 @@ def get_state_prompt(state_name: str, ctx: Context) -> str:
 
 
 @mcp.resource("orchestration://history")
-def get_orchestration_history(ctx: Context) -> str:
+def get_orchestration_history() -> str:
     """Get the history of the orchestration process"""
     history = orchestration_ctx.conversation_history
     return json.dumps(history, indent=2)
