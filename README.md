@@ -1,5 +1,7 @@
 # MCP Agent Orchestration System
 
+[![smithery badge](https://smithery.ai/badge/@aviz85/mcp-agents-orchestra)](https://smithery.ai/server/@aviz85/mcp-agents-orchestra)
+
 A Python implementation of a state-based agent orchestration system using the Model Context Protocol (MCP).
 
 ## What is MCP?
@@ -11,6 +13,14 @@ The Model Context Protocol (MCP) allows applications to provide context for LLMs
 - **Prompts**: Reusable templates for LLM interactions
 
 ## Installation
+
+### Installing via Smithery
+
+To install the MCP Agent Orchestration System for Claude Desktop automatically via [Smithery](https://smithery.ai/server/@aviz85/mcp-agents-orchestra):
+
+```bash
+npx -y @smithery/cli install @aviz85/mcp-agents-orchestra --client claude
+```
 
 ### Prerequisites
 
